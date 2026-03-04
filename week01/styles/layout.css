@@ -1,0 +1,82 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+	line-height: 1.5;
+	color: #1f2937;
+	background: #f3f4f6;
+
+	/* GRID en el body (requisito) */
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas:
+		"header header header"
+		"left   main   right"
+		"footer footer footer";
+	min-height: 100vh;
+	gap: 1rem;
+	padding: 1rem;
+}
+
+header {
+	grid-area: header;
+	background: #111827;
+	color: #ffffff;
+	padding: 1rem;
+	border-radius: 0.75rem;
+}
+
+main {
+	grid-area: main;
+	background: #ffffff;
+	padding: 1rem;
+	border-radius: 0.75rem;
+}
+
+.sidebar.left {
+	grid-area: left;
+	background: #ffffff;
+	padding: 1rem;
+	border-radius: 0.75rem;
+}
+
+.sidebar.right {
+	grid-area: right;
+	background: #ffffff;
+	padding: 1rem;
+	border-radius: 0.75rem;
+}
+
+footer {
+	grid-area: footer;
+	background: #111827;
+	color: #ffffff;
+	padding: 1rem;
+	border-radius: 0.75rem;
+	text-align: center;
+}
+
+.nav {
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+	padding: 0;
+	margin: 0.75rem 0 0;
+}
+
+.nav a {
+	color: #ffffff;
+	text-decoration: none;
+	padding: 0.35rem 0.6rem;
+	border-radius: 0.5rem;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+	background: rgba(255, 255, 255, 0.15);
+	outline: none;
+}
