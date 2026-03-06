@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Oscar Fonseca">
+  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals course home page by Oscar Fonseca">
+  <title>WDD 131 – Dynamic Web Fundamentals – Oscar Fonseca</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>WDD 131 - Oscar Fonseca </h1>
+  <header>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <nav>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/oscar-e-fonseca-m" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://byui.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
+        <li><a href="#">Writing</a></li>
+        <li><a href="#">Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Oscar Fonseca</h1>
+    <section class="card">
+      <h2>About me - Oscar Fonseca</h2>
+      <img src="images/oscar.png" alt="Oscar Fonseca" loading="lazy">
+      <p>I'm a Software developer who is in the process to be graduated as a Bachelor of Science in Software Engineering from the BYU-Idaho (Brigham Young University-Idaho).</p>
+    </section>
+    <section class="card">
+      <h2>WDD 131 - Week progress</h2>
+      <img src="images/wdd131-week1.jpg" alt="WDD 131 - Week 1" loading="lazy">
+      <p>In this first week, we have explored file architecture, the use of CSS Grid for complex layouts, and the implementation of JavaScript to handle dynamic data such as dates.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Oscar Fonseca - Colombia</p>
+    <p id="lastModified"></p>
+  </footer>
+
 </body>
 </html>

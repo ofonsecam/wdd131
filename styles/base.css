@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/* --- Professional color palette --- */
+:root {
+  --header-bg: #1e3a5f;
+  --header-text: #ffffff;
+  --body-bg: #f0f4f8;
+  --text-primary: #2c3e50;
+  --text-secondary: #5a6c7d;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --card-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);
+  --nav-hover-bg: rgba(255, 255, 255, 0.15);
+  --nav-hover-underline: #93c5fd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--body-bg);
+  color: var(--text-primary);
+}
+
+/* --- Header --- */
+header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 1rem 1.5rem;
+}
+
+#course-title {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+/* --- Navigation: Flexbox, no bullets, hover --- */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+}
+
+nav a {
+  color: var(--header-text);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.2s, text-decoration 0.2s;
+}
+
+nav a:hover {
+  background-color: var(--nav-hover-bg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--nav-hover-underline);
+}
+
+/* --- Main: grid container, auto-fit columns --- */
+main {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+main h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.75rem;
+}
+
+/* --- Cards: white bg, subtle border, shadow, padding --- */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.25rem 1.5rem;
+}
+
+.card h2 {
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.card p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+footer #lastModified {
+  color: var(--nav-hover-underline);
+}
