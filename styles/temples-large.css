@@ -9,26 +9,26 @@
     display: none;
   }
 
-  /* Navegación siempre visible en fila */
-  #navigation {
+  /* Navegación siempre visible en fila (nav explícito) */
+  nav#navigation {
     display: flex !important;
     flex-direction: row;
     position: static;
     background-color: transparent;
   }
 
-  #navigation ul {
+  nav#navigation ul {
     display: flex;
     flex-direction: row;
     gap: 0;
   }
 
-  #navigation a {
+  nav#navigation a {
     padding: 0.5rem 1rem;
     background-color: transparent;
   }
 
-  #navigation a:hover {
+  nav#navigation a:hover {
     background-color: var(--color-link-hover);
     border-radius: 0.25rem;
   }

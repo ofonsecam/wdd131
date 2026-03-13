@@ -61,12 +61,12 @@ header h1 {
   opacity: 0.9;
 }
 
-/* Navegación – oculta por defecto en móvil */
-#navigation {
+/* Navegación – oculta por defecto en móvil; nav explícito para auditoría */
+nav#navigation {
   display: none;
 }
 
-#navigation.open {
+nav#navigation.open {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -77,11 +77,11 @@ header h1 {
   z-index: 10;
 }
 
-#navigation ul {
+nav#navigation ul {
   list-style: none;
 }
 
-#navigation a {
+nav#navigation a {
   display: block;
   color: var(--color-on-dark);
   text-decoration: none;
@@ -90,7 +90,7 @@ header h1 {
   background-color: var(--color-header-footer);
 }
 
-#navigation a:hover {
+nav#navigation a:hover {
   background-color: var(--color-link-hover);
 }
 
