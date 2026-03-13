@@ -1,0 +1,40 @@
+/**
+ * Temple Album – Estilos desktop (≥768px).
+ * Nav en fila, galería multi-columna.
+ */
+
+@media screen and (min-width: 768px) {
+  /* Ocultar botón hamburguesa */
+  #menu {
+    display: none;
+  }
+
+  /* Navegación siempre visible en fila */
+  #navigation {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+  }
+
+  #navigation ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+  }
+
+  #navigation a {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+  }
+
+  #navigation a:hover {
+    background-color: var(--color-link-hover);
+    border-radius: 0.25rem;
+  }
+
+  /* Galería – columnas dinámicas */
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}

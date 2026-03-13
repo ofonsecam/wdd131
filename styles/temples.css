@@ -1,0 +1,149 @@
+/**
+ * Temple Album – Estilos base (mobile-first).
+ * Contraste AA, Flexbox (nav), CSS Grid (galería).
+ */
+
+/* Variables y contraste AA */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #333333;
+  --color-header-footer: #003366;
+  --color-on-dark: #ffffff;
+  --color-link-hover: #004080;
+  --color-figure-border: #e0e0e0;
+}
+
+/* Reseteo básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+/* Header – Flexbox */
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-header-footer);
+  color: var(--color-on-dark);
+  padding: 1rem;
+}
+
+header h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Botón menú hamburguesa */
+#menu {
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  color: var(--color-on-dark);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  line-height: 1;
+}
+
+#menu:hover,
+#menu:focus-visible {
+  opacity: 0.9;
+}
+
+/* Navegación – oculta por defecto en móvil */
+#navigation {
+  display: none;
+}
+
+#navigation.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-header-footer);
+  z-index: 10;
+}
+
+#navigation ul {
+  list-style: none;
+}
+
+#navigation a {
+  display: block;
+  color: var(--color-on-dark);
+  text-decoration: none;
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--color-header-footer);
+}
+
+#navigation a:hover {
+  background-color: var(--color-link-hover);
+}
+
+/* Main */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main h2 {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+/* Galería – CSS Grid (1 columna en móvil) */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.gallery figure {
+  margin: 0;
+  border: 1px solid var(--color-figure-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery figcaption {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-header-footer);
+  color: var(--color-on-dark);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
