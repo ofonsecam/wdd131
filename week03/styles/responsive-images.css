@@ -1,0 +1,12 @@
+.Temple img {
+    width: 100%;
+    height: auto;
+    display: block; 
+    object-fit: cover; 
+}
+
+.Temple {
+    max-width: 1500px;
+    margin: 0 auto;
+    background-color: #eee;
+}
