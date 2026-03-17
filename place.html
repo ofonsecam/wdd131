@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Greater Santiago, Chile - información y datos">
+    <title>Greater Santiago, Chile</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Greater Santiago, Chile</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/santiago-large.webp" media="(min-width: 800px)">
+                <img src="images/santiago-small.webp" alt="Greater Santiago, Chile" width="1000" height="500">
+            </picture>
+        </div>
+
+        <section class="data">
+            <h2>Datos</h2>
+            <ul>
+                <li><strong>Area:</strong> 10,685 km²</li>
+                <li><strong>Population:</strong> 6,907,530</li>
+                <li><strong>Languages:</strong> Spanish</li>
+                <li><strong>Currency:</strong> Chilean Peso (CLP)</li>
+                <li><strong>Time zone:</strong> CLST (UTC−3)</li>
+                <li><strong>Calling code:</strong> +56</li>
+                <li><strong>Internet TLD:</strong> .cl</li>
+            </ul>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <img src="images/weather-icon.svg" alt="Weather" class="weather-icon-mobile">
+            <ul>
+                <li><strong>Temperature:</strong> <span id="temperature">9</span> °C</li>
+                <li><strong>Conditions:</strong> Partly cloudy</li>
+                <li><strong>Wind:</strong> <span id="windspeed">12</span> km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p><span id="currentyear"></span> Oscar Fonseca | Colombia</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

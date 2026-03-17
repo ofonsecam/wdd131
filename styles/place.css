@@ -1,0 +1,122 @@
+
+/* ---------- Variables globales (Bandera Chile) ---------- */
+:root {
+
+
+    --primary-color: #0039a6;
+
+    --secondary-color: #d52b1e;
+
+    --bg-color: #f4f4f4;
+
+    --text-color: #333333;
+
+    --main-font: 'Roboto', sans-serif;
+
+}
+
+/* ---------- Estilos base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--main-font);
+    line-height: 1.5;
+}
+
+/* ---------- Diseño móvil (Mobile First) ---------- */
+header,
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+}
+
+/* Imágenes responsivas */
+img,
+.hero img,
+.hero picture img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero {
+    width: 100%;
+}
+
+/* Tarjetas: .data y .weather */
+section.data,
+section.weather {
+    background-color: white;
+    border-radius: 0.5rem;
+    border-top: 5px solid var(--secondary-color); 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    margin: 1rem;
+}
+
+section.data h2,
+section.weather h2 {
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+    line-height: 1.8;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+ul li strong {
+    color: var(--secondary-color); 
+}
+
+.weather-icon-mobile {
+    width: 60px;
+    height: auto;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* ---------- Media query: escritorio (min-width: 800px) ---------- */
+@media (min-width: 800px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .hero {
+        grid-column: 1 / -1; 
+    }
+
+    section.data,
+    section.weather {
+        margin: 0; 
+    }
+
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: " ⛅";
+        font-size: 1.2rem;
+    }
+}
