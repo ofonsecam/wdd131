@@ -57,7 +57,7 @@ img,
 /* Tarjetas: .data y .weather */
 section.data,
 section.weather {
-    background-color: ffffff;
+    background-color: #ffffff;
     border-radius: 0.5rem;
     border-top: 5px solid var(--secondary-color); 
     box-shadow: 0 2px 8px #0000001a;
