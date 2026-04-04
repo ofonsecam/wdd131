@@ -1,7 +1,15 @@
 /* 0. Font Import (Crucial for points) */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
 
-/* ... (Mantén aquí el código de Variables y Reset que te di antes) ... */
+/* ===== CSS Custom Properties ===== */
+:root {
+    --font-main: 'Open Sans', Arial, Helvetica, sans-serif;
+    --font-heading: 'Montserrat', 'Open Sans', Arial, Helvetica, sans-serif;
+    --white: #fff;
+    --primary: #2c3e50;
+    --secondary: #ecf0f1;
+    --accent: #27ae60;
+}
 
 /* Header — barra de navegación (Flexbox) */
 header {
@@ -11,13 +19,13 @@ header {
     flex-wrap: wrap;
     gap: 1rem;
     padding: 1rem clamp(1rem, 4vw, 2.5rem);
-    background-color: #2c3e50;
-    color: #fff;
+    background-color: var(--primary);
+    color: var(--white);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
 }
 
 header .logo {
-    font-family: var(--font-heading, "Montserrat", sans-serif);
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.25rem;
     letter-spacing: 0.02em;
@@ -34,7 +42,7 @@ header nav ul {
 }
 
 header nav a {
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
     font-weight: 600;
     padding: 0.25rem 0;
@@ -50,7 +58,7 @@ header nav a:focus-visible {
 }
 
 header nav a.active {
-    border-bottom-color: #fff;
+    border-bottom-color: var(--white);
 }
 
 /* Page layout — el footer permanece al fondo aunque haya poco contenido */
@@ -59,13 +67,14 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    font-family: var(--font-main);
 }
 
 /* ===== APP CONTAINER ===== */
 .app-container {
     max-width: 600px;
     margin: 2.5rem auto;
-    background: #fff;
+    background: var(--white);
     border-radius: 1rem;
     box-shadow: 0 4px 20px rgba(44, 62, 80, 0.18);
     padding: 2rem 2.5rem;
@@ -97,8 +106,8 @@ body {
 }
 
 #add-task {
-    background: #27ae60;
-    color: #fff;
+    background: var(--accent);
+    color: var(--white);
     border: none;
     border-radius: 0.5rem;
     padding: 0.75rem 1.5rem;
@@ -121,7 +130,7 @@ main > form,
 main .app-container {
     max-width: 800px;
     margin: 2.5rem auto;
-    background: #fff;
+    background: var(--white);
     border-radius: 1rem;
     box-shadow: 0 4px 20px rgba(44, 62, 80, 0.10);
     padding: 2rem 2.5rem;
@@ -168,9 +177,9 @@ form textarea {
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form textarea:focus {
-    border-color: #2c3e50;
+    border-color: var(--primary);
     outline: none;
-    background: #fff;
+    background: var(--white);
 }
 
 form textarea {
@@ -180,8 +189,8 @@ form textarea {
 
 form button[type="submit"], 
 button#add-task {
-    background: #27ae60;
-    color: #fff;
+    background: var(--accent);
+    color: var(--white);
     border: none;
     border-radius: 0.5rem;
     padding: 0.75rem 1.5rem;
@@ -239,7 +248,7 @@ form button[type="submit"]:focus-visible {
     width: 44px;
     height: 44px;
     background: #e74c3c;
-    color: #fff;
+    color: var(--white);
     border: none;
     border-radius: 0.4em;
     font-size: 1.3rem;
@@ -304,7 +313,7 @@ form button[type="submit"]:focus-visible {
 .references h2 {
     margin-bottom: 1rem;
     font-size: 1.1rem;
-    font-family: var(--font-heading, inherit);
+    font-family: var(--font-heading);
     font-weight: 600;
     letter-spacing: 0.02em;
 }
@@ -348,8 +357,8 @@ main {
 }
 
 footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
+    background-color: var(--primary);
+    color: var(--secondary);
     text-align: center;
     padding: 2rem;
     border-top: 1px solid rgba(236, 240, 241, 0.12);
