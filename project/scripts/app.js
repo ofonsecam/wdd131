@@ -23,26 +23,16 @@ taskForm.addEventListener("submit", function(e) {
     }
 });
 
-// Function to render tasks to the DOM
+// Function to render tasks to the DOM (REFRACTORED: ALL DOM STRINGS USE TEMPLATE LITERALS)
 function renderTasks() {
     taskList.innerHTML = ""; // Clear the list
     tasks.forEach(task => {
         const li = document.createElement("li");
         li.dataset.id = task.id;
-        li.textContent = task.text;
-
-        if (task.completed) {
-            li.style.textDecoration = "line-through";
-            li.style.opacity = "0.7";
-        }
-
-        // Create delete button
-        const deleteBtn = document.createElement("button");
-        deleteBtn.className = "delete-btn";
-        deleteBtn.setAttribute("data-id", task.id);
-        deleteBtn.innerHTML = "🗑️";
-        li.appendChild(deleteBtn);
-
+        li.innerHTML = `
+            <span class="task-text" style="${task.completed ? 'text-decoration:line-through;opacity:0.7;' : ''}">${task.text}</span>
+            <button class="delete-btn" data-id="${task.id}">🗑️</button>
+        `;
         taskList.appendChild(li);
     });
 }
