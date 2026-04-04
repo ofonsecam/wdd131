@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Planner - Aura Planner</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Aura Planner</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="app.html" class="active">My Planner</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="app-container">
+            <h1>My Tasks</h1>
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="What needs to be done?" required>
+                <button type="submit" id="add-task">Add Task</button>
+            </form>
+            <ul id="task-list">
+                </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Aura Planner | Oscar Fonseca</p>
+    </footer>
+    <script src="scripts/app.js" defer></script>
+</body>
+</html>
