@@ -23,16 +23,18 @@ taskForm.addEventListener("submit", function(e) {
     }
 });
 
-// Function to render tasks to the DOM (REFRACTORED: ALL DOM STRINGS USE TEMPLATE LITERALS)
+// Renders tasks in the DOM using classes (no inline styles; CSP-friendly style-src).
 function renderTasks() {
     taskList.innerHTML = ""; // Clear the list
     tasks.forEach(task => {
         const li = document.createElement("li");
-        li.dataset.id = task.id;
+        li.dataset.id = `${task.id}`;
+        const doneClass = task.completed ? " task-completed" : "";
         li.innerHTML = `
-            <span class="task-text" style="${task.completed ? 'text-decoration:line-through;opacity:0.7;' : ''}">${task.text}</span>
-            <button class="delete-btn" data-id="${task.id}">🗑️</button>
+            <span class="task-text${doneClass}"></span>
+            <button type="button" class="delete-btn" data-id="${task.id}" aria-label="Delete task">🗑️</button>
         `;
+        li.querySelector(".task-text").textContent = task.text;
         taskList.appendChild(li);
     });
 }
@@ -47,5 +49,4 @@ taskList.addEventListener("click", function(e) {
     }
 });
 
-// Initial render
 renderTasks();
